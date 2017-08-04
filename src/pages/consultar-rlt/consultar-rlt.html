@@ -1,0 +1,113 @@
+<!--
+  Generated template for the ConsultarRltPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>consultarRLT</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Consulta de Relaciones Laborales de Terceros
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <label>Tipo Tercero</label>
+      </ion-item>
+      <ion-item>
+        <select class="dropdown1 form-control" id="dd_tipoTercero" name="dd_tipoTercero">
+          <option value="">Seleccione...</option>
+          <option value="1">CONTRATISTA</option>
+          <option value="2">COOPERADO</option>
+          <option value="3">MISION</option>
+        </select>
+      </ion-item>
+      <ion-item>
+        <button ion-button block>Consultar</button>
+      </ion-item>
+      <ion-item>
+        <a href="/RelacionesLaborales/DescargarTerceroRelLab?startDate=%23%23" id="descargarFilelink">Descargar</a>
+      </ion-item>
+      <ion-item>
+        <ion-scroll scrollX="true" scrollY="true">
+        <div id="list-items">
+            
+
+<div class="table-responsive" style="overflow-x:scroll">
+    <table class="table table-bordered" style="border: 2px solid lightslategray">
+        <thead>
+            <tr class="titulos_tabla">
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Tipo de tercero
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    NIT de la empresa
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Razón social de la empresa
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Tipo de documento
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Número de documento
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Primer apellido
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Segundo apellido
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Primer nombre
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Segundo nombre
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Fecha de nacimiento
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Ocupación
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    Cargo
+                </th>
+                <th style="border-right: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                    E-mail
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<input type="hidden" name="id" id="id" value="1">
+<div class="text-center">
+    <ul class="pagination">
+        <li><a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#list-items" href="/RelacionesLaborales/ListTerceroRelacionesLaborales/1">&lt;&lt;</a></li>
+        <li><a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#list-items" href="/RelacionesLaborales/ListTerceroRelacionesLaborales">&gt;&gt;</a></li>
+    </ul>
+</div>
+
+        </div>
+        </ion-scroll>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</ion-content>

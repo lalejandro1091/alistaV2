@@ -1,0 +1,25 @@
+page-sede {
+
+}
+div.buttonbar4 {
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    button {
+        /* use width: 23% for 4 buttons, width: 18.2% for 5 buttons */
+        width: 33%;
+        
+        height: 40px;
+        ion-col {
+            text-align: center;
+            ion-icon {
+                /* margin-bottom controls the space between the icons and text */
+                margin-bottom: 3px;   
+            }
+        }
+    }
+}
+ion-scroll {
+    white-space: nowrap;
+    height: 600px;
+}

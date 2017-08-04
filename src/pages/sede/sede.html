@@ -1,0 +1,280 @@
+<!--
+  Generated template for the SedePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>sede</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="buttonbar4">
+    <button outline ion-col (click)="goDatos()" center>
+        
+            <ion-col>
+            Datos Empresa
+            </ion-col>
+    </button>
+    <button outline  ion-col center>
+        <ion-col>
+            Sede
+        </ion-col>
+    </button>
+    <button outline (click)="goUsuarios()" ion-col center>
+        <ion-col>
+            Usuarios
+        </ion-col>
+    </button>
+    
+</div>
+  <button button ion-button (click)="agregarsede()" block >Agregar Sede</button>
+ 
+
+  <ion-scroll scrollX="true" scrollY="true">
+  <div class="table-responsive table-bordered">
+    <table class="table table-responsive table-bordered" style="border: 2px solid lightslategray">
+        <tr class="titulos_tabla">
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                Nombre Sede
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                Sector
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                Direcci&#243;n Sede
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                Municipio
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center; vertical-align:middle">
+                Departamento
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center; vertical-align:middle">Acciones</th>
+        </tr>
+
+            <tr class="titulos_filas">
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    CASA MATRIZ
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Urbano
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Autonorte # 94 - 72
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    BOGOTA, D.C.
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    BOGOTA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    
+                    <a href="/Sede/Edit/34" class="btn btn-search btn-md" title="Editar">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    |
+                    <a data-toggle="modal" data-target="#modalEliminar21" value="Eliminar" class="btn btn-search" title="Eliminar">
+                        <span class="glyphicon glyphicon-erase"></span>
+                    </a>
+
+                    <div id="modalEliminar21" class=" modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                                    <h4 class="modal-title title">Eliminar Sede</h4>
+                                </div>
+                                <div class="modal-body " style="text-align:center">
+                                    <p>¿Esta seguro que desea eliminar la Sede?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row" align="center">
+                                        <div class="col-md-6 col-xs-6">
+                                            <a class="boton botonactive" (click)="showConfirm()" type="button">Eliminar</a>
+                                        </div>
+                                        <div class="col-md-6 col-xs-6">
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+            <tr class="titulos_filas">
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    SUCURSAL BOGOT&#193; CORDINADORA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Urbano
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Carrera 7 # 26-20
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    BOGOTA, D.C.
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    BOGOTA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    
+                    <a href="/Sede/Edit/40" class="btn btn-search btn-md" title="Editar">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    |
+                    <a data-toggle="modal" data-target="#modalEliminar27" value="Eliminar" class="btn btn-search" title="Eliminar">
+                        <span class="glyphicon glyphicon-erase"></span>
+                    </a>
+
+                    <div id="modalEliminar27" class=" modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                                    <h4 class="modal-title title">Eliminar Sede</h4>
+                                </div>
+                                <div class="modal-body " style="text-align:center">
+                                    <p>¿Esta seguro que desea eliminar la Sede?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row" align="center">
+                                        <div class="col-md-6 col-xs-6">
+                                            <a class="boton botonactive" (click)="showConfirm()" type="button">Eliminar</a>
+                                        </div>
+                                        <div class="col-md-6 col-xs-6">
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+            <tr class="titulos_filas">
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    SUCURSAL SANTANDER
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Urbano
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Carrera 33 # 42 - 51 Cabecera
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    BUCARAMANGA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    SANTANDER
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    
+                    <a href="/Sede/Edit/41" class="btn btn-search btn-md" title="Editar">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    |
+                    <a data-toggle="modal" data-target="#modalEliminar28" value="Eliminar" class="btn btn-search" title="Eliminar">
+                        <span class="glyphicon glyphicon-erase"></span>
+                    </a>
+
+                    <div id="modalEliminar28" class=" modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                                    <h4 class="modal-title title">Eliminar Sede</h4>
+                                </div>
+                                <div class="modal-body " style="text-align:center">
+                                    <p>¿Esta seguro que desea eliminar la Sede?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row" align="center">
+                                        <div class="col-md-6 col-xs-6">
+                                            <a class="boton botonactive" (click)="showConfirm()" type="button">Eliminar</a>
+                                        </div>
+                                        <div class="col-md-6 col-xs-6">
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+            <tr class="titulos_filas">
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    SUCURSAL HUILA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Urbano
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    Cra 7 40-50
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    NEIVA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    HUILA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    
+                    <a href="/Sede/Edit/47" class="btn btn-search btn-md" title="Editar">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    |
+                    <a data-toggle="modal" data-target="#modalEliminar34" value="Eliminar" class="btn btn-search" title="Eliminar">
+                        <span class="glyphicon glyphicon-erase"></span>
+                    </a>
+
+                    <div id="modalEliminar34" class=" modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                                    <h4 class="modal-title title">Eliminar Sede</h4>
+                                </div>
+                                <div class="modal-body " style="text-align:center">
+                                    <p>¿Esta seguro que desea eliminar la Sede?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row" align="center">
+                                        <div class="col-md-6 col-xs-6">
+                                            <a class="boton botonactive" (click)="showConfirm()" type="button">Eliminar</a>
+                                        </div>
+                                        <div class="col-md-6 col-xs-6">
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+
+    </table>
+</div>
+  </ion-scroll>
+</ion-content>

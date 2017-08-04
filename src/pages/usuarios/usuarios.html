@@ -1,0 +1,175 @@
+<!--
+  Generated template for the UsuariosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>usuarios</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="buttonbar4">
+    <button outline ion-col (click)="goDatos()" center>
+        
+            <ion-col>
+            Datos Empresa
+            </ion-col>
+    </button>
+    <button outline (click)="goSede()" ion-col center>
+        <ion-col>
+            Sede
+        </ion-col>
+    </button>
+    <button outline ion-col center>
+        <ion-col>
+            Usuarios
+        </ion-col>
+    </button>
+    
+</div>
+
+<button ion-button block (click)="crearU()">Crear Nuevo</button>
+<ion-scroll scrollX="true" scrollY="true">
+<div class="table-responsive">
+    <table class="table table-bordered" style="border: 2px solid lightslategray">
+        <tbody><tr class="titulos_tabla">
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">
+                Descripcion
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">
+                <strong>Tipo de Documento</strong>
+                
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">
+                Numero Documento
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">
+                Nombre Usuario
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">
+                Firma Digital
+            </th>
+            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center"><strong>Acciones</strong></th>
+        </tr>
+
+            <tr class="titulos_filas">
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+<label for="TRABAJADORES">TRABAJADORES</label>                        <br>
+                    
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    CÉDULA DE CIUDADANIA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    10874897
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    SOFIA SANTOS
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    <button type="button" class="btn btn-search btn-md" data-toggle="modal" data-target="#modal1055" title="Consultar">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+
+                
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    
+                    <a href="/Usuarios/Edit/1055" class="btn btn-search btn-md" title="Editar">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    |
+                    
+                    <a data-toggle="modal" data-target="#modalEliminar1055" value="Eliminar" class=" btn btn-search btn-md" title="Eliminar">
+                        <span class="glyphicon glyphicon-erase"></span>
+                    </a>
+
+                    <div id="modalEliminar1055" class=" modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        
+                                    </button>
+                                    <h4 class="modal-title title">Eliminar Usuario</h4>
+                                </div>
+                                <div class="modal-body " style="text-align:center">
+                                    <p>¿Seguro desea eliminar el usuario seleccionado?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a class="boton botonactive" href="/Usuarios/DeleteConfirmed/1055" type="button">Eliminar</a>
+                                    <button type="button" class="boton botoncancel" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="titulos_filas">
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+<label for="REPRESENTANTE_LEGAL">REPRESENTANTE LEGAL</label>                        <br>
+                    
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    CÉDULA DE CIUDADANIA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    1100048445
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                    PATRICIA SANTA
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    <button type="button" class="btn btn-search btn-md" data-toggle="modal" data-target="#modal1065" title="Consultar">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+
+                    
+                </td>
+                <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                    
+                    <a href="/Usuarios/Edit/1065" class="btn btn-search btn-md" title="Editar">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    |
+                    
+                    <a data-toggle="modal" data-target="#modalEliminar1065" value="Eliminar" class=" btn btn-search btn-md" title="Eliminar">
+                        <span class="glyphicon glyphicon-erase"></span>
+                    </a>
+
+                    <div id="modalEliminar1065" class=" modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        
+                                    </button>
+                                    <h4 class="modal-title title">Eliminar Usuario</h4>
+                                </div>
+                                <div class="modal-body " style="text-align:center">
+                                    <p>¿Seguro desea eliminar el usuario seleccionado?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a class="boton botonactive" href="/Usuarios/DeleteConfirmed/1065" type="button">Eliminar</a>
+                                    <button type="button" class="boton botoncancel" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </tbody></table>
+</div>
+</ion-scroll>
+</ion-content>

@@ -1,0 +1,2349 @@
+<!--
+  Generated template for the AgregarSedePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>agregarSede</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-list>
+    <ion-item>
+      <label>Nombre Sede</label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <label>Dirección</label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <label>Departamento</label>
+    </ion-item>
+    <ion-item>
+      <select class="form-control" id="Fk_Id_Departamento" name="Fk_Id_Departamento" onchange="BuscarMunicipios()">
+        <option value="">--Seleccionar Departamento--</option>
+<option value="1">ANTIOQUIA</option>
+<option value="2">ATLANTICO</option>
+<option value="3">BOGOTA</option>
+<option value="4">BOLIVAR</option>
+<option value="5">BOYACA</option>
+<option value="6">CALDAS</option>
+<option value="7">CAQUETA</option>
+<option value="8">CAUCA</option>
+<option value="9">CESAR</option>
+<option value="10">CORDOBA</option>
+<option value="11">CUNDINAMARCA</option>
+<option value="12">CHOCO</option>
+<option value="13">HUILA</option>
+<option value="14">LA GUAJIRA</option>
+<option value="15">MAGDALENA</option>
+<option value="16">META</option>
+<option value="17">NARIÑO</option>
+<option value="18">N. DE SANTANDER</option>
+<option value="19">QUINDIO</option>
+<option value="20">RISARALDA</option>
+<option value="21">SANTANDER</option>
+<option value="22">SUCRE</option>
+<option value="23">TOLIMA</option>
+<option value="24">VALLE DEL CAUCA</option>
+<option value="25">ARAUCA</option>
+<option value="26">CASANARE</option>
+<option value="27">PUTUMAYO</option>
+<option value="28">SAN ANDRES</option>
+<option value="29">AMAZONAS</option>
+<option value="30">GUAINIA</option>
+<option value="31">GUAVIARE</option>
+<option value="32">VAUPES</option>
+<option value="33">VICHADA</option>
+<option value="34">META</option>
+<option value="35">NARIÑO</option>
+<option value="36">N. DE SANTANDER</option>
+<option value="37">QUINDIO</option>
+<option value="38">RISARALDA</option>
+<option value="39">SANTANDER</option>
+<option value="40">SUCRE</option>
+<option value="41">TOLIMA</option>
+<option value="42">VALLE DEL CAUCA</option>
+<option value="43">ARAUCA</option>
+<option value="44">CASANARE</option>
+<option value="45">PUTUMAYO</option>
+<option value="46">SAN ANDRES</option>
+<option value="47">AMAZONAS</option>
+<option value="48">GUAINIA</option>
+<option value="49">GUAVIARE</option>
+<option value="50">VAUPES</option>
+<option value="51">VICHADA</option>
+</select>
+    </ion-item>
+<ion-item>
+  <label>Municipio</label>
+</ion-item>
+<ion-item>
+  <select class="form-control" id="Fk_Id_Municipio" name="Fk_Id_Municipio"></select>
+</ion-item>
+<ion-item>
+  <label>Sector</label>
+</ion-item>
+<ion-item>
+  <label>
+    <input type="radio" value="Urbano" name="Sector" id="Sector">
+    Urbano
+  </label>
+</ion-item>
+<ion-item>
+  <label>
+    <input type="radio" value="Rural" name="Sector" id="Sector">
+    Rural
+  </label>
+</ion-item>
+<ion-item>
+  <label>Centros de Trabajo</label>
+</ion-item>
+
+<ion-item>
+  <ion-scroll scrollX="true" scrollY="true">
+  <table class="table table-responsive table-bordered " id="tablacentros" name="tablacentros" style="border-collapse:collapse">
+    <br>
+    <table class="table table-condensed">
+      <tbody>
+        <tr class="titulos_tabla">
+           <td>
+             <b>
+               Seleccionar
+              </b>
+            </td>
+             <td>
+               <b>
+                 ID
+                </b>
+              </td>
+               <td>
+                 <b>
+                   Actividad Economica
+                  </b>
+                </td> 
+                <td>
+                  <b>
+                  Codigo Actividad
+                </b>
+              </td>
+               <td>
+                 <b>
+                   Numero Trabajadores
+                  </b>
+                </td>
+               </tr>
+              <tr name="pcs" style="display: table-row;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="93">
+                  93
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: table-row;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="98">
+                  98
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: table-row;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="107">
+                  107
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A CONSULTORIA EN PROGRAMAS DE INFORMATICA Y SUMINISTRO DE PROGRAMAS DE INFORMATICA INCLUYE. EDICION DE SOFTWARE, LAS ACTIVIDADES RELACIONADAS CON EL ANALISIS, EL DISEÑO Y LA PROGRAMACION DE SISTEMAS LISTOS PARA SER UTILIZADOS, ELABORACION DE PROGRAMAS CON ARREGLO A LAS INSTRUCCIONES DE LOS USUARIOS, EL DESARROLLO DE SISTEMAS DE COMPUTADORA LISTOS PARA SER UTILIZADOS">
+                  EMPRESAS DEDICADAS A CONSULTORIA EN PROGRAMAS DE INFORMATICA Y SUMINISTRO DE PROGRAMAS DE INFORMATICA INCLUYE. EDICION DE SOFTWARE, LAS ACTIVIDADES RELACIONADAS CON EL ANALISIS, EL DISEÑO Y LA PROGRAMACION DE SISTEMAS LISTOS PARA SER UTILIZADOS, ELABORACION DE PROGRAMAS CON ARREGLO A LAS INSTRUCCIONES DE LOS USUARIOS, EL DESARROLLO DE SISTEMAS DE COMPUTADORA LISTOS PARA SER UTILIZADOS
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1722001">
+                  1722001
+                </td>
+                <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: table-row;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="108">
+                108
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="ESTABLECIMIENTOS DE EDUCACION NO FORMAL INCLUYE PROGRAMAS DE ALFABETIZACION PARA ADULTOS ETC.">
+                ESTABLECIMIENTOS DE EDUCACION NO FORMAL INCLUYE PROGRAMAS DE ALFABETIZACION PARA ADULTOS ETC.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1806001">
+                1806001
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: table-row;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="118">
+                118
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS">
+                EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="2672101">
+                2672101
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="120">
+                120
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES EJECUTIVAS DE LA ADMINISTRACION PUBLICA EN GENERAL INCLUYE MINISTERIOS, ORGANOS, ORGANISMOS Y DEPENDENCIAS ADMINISTRATIVAS EN LOS NIVELES CENTRAL, REGIONAL Y LOCAL.">
+                EMPRESAS DEDICADAS A ACTIVIDADES EJECUTIVAS DE LA ADMINISTRACION PUBLICA EN GENERAL INCLUYE MINISTERIOS, ORGANOS, ORGANISMOS Y DEPENDENCIAS ADMINISTRATIVAS EN LOS NIVELES CENTRAL, REGIONAL Y LOCAL.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1751201">
+                1751201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="123">
+                123
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="2753001">
+                2753001
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="126">
+                126
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A LA FABRICACION DE OTROS TIPOS DE MAQUINARIA DE USO GENERAL NCP INCLUYE LA DISTRIBUCION Y/O FABRICACION DE APARATOS PARA PURIFICAR AGUA, EXTRACCION Y/O PURIFICACION ,LA FABRICACION DE APARATOS DE CALEFACCION Y/O REFIGERACION, CALENTADORES PARA AGUA, ESTUFAS A GAS, LA FABRICACION DE INSTRUMENTOS Y/O ARTICULOS DE INGENIERIA">
+                EMPRESAS DEDICADAS A LA FABRICACION DE OTROS TIPOS DE MAQUINARIA DE USO GENERAL NCP INCLUYE LA DISTRIBUCION Y/O FABRICACION DE APARATOS PARA PURIFICAR AGUA, EXTRACCION Y/O PURIFICACION ,LA FABRICACION DE APARATOS DE CALEFACCION Y/O REFIGERACION, CALENTADORES PARA AGUA, ESTUFAS A GAS, LA FABRICACION DE INSTRUMENTOS Y/O ARTICULOS DE INGENIERIA
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3291901">
+                3291901
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="132">
+                132
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS AL TRANSPORTE NO REGULAR INDIVIDUAL DE PASAJEROS">
+                EMPRESAS DEDICADAS AL TRANSPORTE NO REGULAR INDIVIDUAL DE PASAJEROS
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="4603101">
+                4603101
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="134">
+                134
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES JURIDICAS INCLUYE LAS OFICINAS Y/O DESPACHOS PROFESIONALES QUE DESARROLLAN ACTIVIDADES DE TIPO JURIDICO">
+                EMPRESAS DEDICADAS A ACTIVIDADES JURIDICAS INCLUYE LAS OFICINAS Y/O DESPACHOS PROFESIONALES QUE DESARROLLAN ACTIVIDADES DE TIPO JURIDICO
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1741101">
+                1741101
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="136">
+                136
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE LA PRACTICA MEDICA INCLUYE CONSULTORIOS MEDICOS Y/O ODONTOLOGICOS CUYAS UNIDADES RADIOLOGICAS CUMPLAN CON LAS NORMAS DE RADIOPROTECCION VIGENTES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE LA PRACTICA MEDICA INCLUYE CONSULTORIOS MEDICOS Y/O ODONTOLOGICOS CUYAS UNIDADES RADIOLOGICAS CUMPLAN CON LAS NORMAS DE RADIOPROTECCION VIGENTES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1851201">
+                1851201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="137">
+                137
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="138">
+                138
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE ARQUITECTURA E INGENIERIA Y ACTIVIDADES CONEXAS DE ASESORAMIENTO TECNICO INCLUYE ACTIVIDADES DE DIRECCION DE OBRAS DE CONSTRUCCION, AGRIMENSURA Y DE EXPLOTACION Y PROSPECCION GEOLOGICAS ASI COMO LA PRESTACION DE ASESORAMIENTO TECNICO CONEXO, EL DISE¥O INDUSTRIAL Y DE MAQUINAS (SIN INTERVENCION DIRECTA EN LAS OBRAS)">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE ARQUITECTURA E INGENIERIA Y ACTIVIDADES CONEXAS DE ASESORAMIENTO TECNICO INCLUYE ACTIVIDADES DE DIRECCION DE OBRAS DE CONSTRUCCION, AGRIMENSURA Y DE EXPLOTACION Y PROSPECCION GEOLOGICAS ASI COMO LA PRESTACION DE ASESORAMIENTO TECNICO CONEXO, EL DISE¥O INDUSTRIAL Y DE MAQUINAS (SIN INTERVENCION DIRECTA EN LAS OBRAS)
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1742101">
+                1742101
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="147">
+                147
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE OTRAS ORGANIZACIONES NCP INCLUYE EMPRESAS DEDICADAS A ACTIVIDADES TALES COMO ASOCIACIONES CON FINES CULTURALES, RECREATIVOS Y ARTESANALES Y SERVICIOS DE LA ORGANIZACION DE EVENTOS DE CAPACITACION, SOCIALES Y/O FORMACION CULTURAL.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE OTRAS ORGANIZACIONES NCP INCLUYE EMPRESAS DEDICADAS A ACTIVIDADES TALES COMO ASOCIACIONES CON FINES CULTURALES, RECREATIVOS Y ARTESANALES Y SERVICIOS DE LA ORGANIZACION DE EVENTOS DE CAPACITACION, SOCIALES Y/O FORMACION CULTURAL.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1919901">
+                1919901
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="51">
+                51
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="52">
+                52
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="82">
+                82
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="92">
+                92
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE ASESORAMIENTO EMPRESARIAL Y EN MATERIA DE GESTION INCLUYE LAS ZONAS FRANCAS DEDICADAS A PROMOCION, CREACION, DESARROLLO Y ADMINISTRACION DEL PROCESO DE INDUSTRIALIZACION DE BIENES Y LA PRESTACION DE SERVICIOS DESTINADOS PRIORITARIAMENTE A LOS MERCADOS EXTERNOS, ASI COMO LOS SERVICIOS DE AGRONOMOS, ECONOMISTAS, INGENIEROS ETC.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE ASESORAMIENTO EMPRESARIAL Y EN MATERIA DE GESTION INCLUYE LAS ZONAS FRANCAS DEDICADAS A PROMOCION, CREACION, DESARROLLO Y ADMINISTRACION DEL PROCESO DE INDUSTRIALIZACION DE BIENES Y LA PRESTACION DE SERVICIOS DESTINADOS PRIORITARIAMENTE A LOS MERCADOS EXTERNOS, ASI COMO LOS SERVICIOS DE AGRONOMOS, ECONOMISTAS, INGENIEROS ETC.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1741401">
+                1741401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="53">
+                53
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="54">
+                54
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="85">
+                85
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="62">
+                62
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="130">
+                130
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="139">
+                139
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS">
+                EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="2672101">
+                2672101
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="29">
+                29
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE LAS INSTITUCIONES PRESTADORAS DE SERVICIOS DE SALUD, CON INTERNACION INCLUYE HOSPITALES GENERALES, CENTROS DE ATENCION MEDICA CON AYUDAS DIAGNOSTICAS, INSTITUCIONES PRESTADORAS DE SERVICIOS DE SALUD, CENTROS ESPECIALIZADOS (EXCEPTO DE RADIODIAGNOSTICOS Y/O RADIOTERAPIA), HOSPITALES PARA TUBERCULOSOS, INSTITUCIONES DE SALUD MENTAL">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE LAS INSTITUCIONES PRESTADORAS DE SERVICIOS DE SALUD, CON INTERNACION INCLUYE HOSPITALES GENERALES, CENTROS DE ATENCION MEDICA CON AYUDAS DIAGNOSTICAS, INSTITUCIONES PRESTADORAS DE SERVICIOS DE SALUD, CENTROS ESPECIALIZADOS (EXCEPTO DE RADIODIAGNOSTICOS Y/O RADIOTERAPIA), HOSPITALES PARA TUBERCULOSOS, INSTITUCIONES DE SALUD MENTAL
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851101">
+                3851101
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="78">
+                78
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="84">
+                84
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="89">
+                89
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="121">
+                121
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="28">
+                28
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="80">
+                80
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="105">
+                105
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="63">
+                63
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="124">
+                124
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES">EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="2753001">
+                2753001
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="141">
+                141
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="144">
+                144
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="75">
+                75
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="111">
+                111
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="61">
+                61
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="59">
+                59
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="117">
+                117
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="140">
+                140
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="2753001">
+                2753001
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="73">
+                73
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="125">
+                125
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE ASESORAMIENTO EMPRESARIAL Y EN MATERIA DE GESTION INCLUYE LAS ZONAS FRANCAS DEDICADAS A PROMOCION, CREACION, DESARROLLO Y ADMINISTRACION DEL PROCESO DE INDUSTRIALIZACION DE BIENES Y LA PRESTACION DE SERVICIOS DESTINADOS PRIORITARIAMENTE A LOS MERCADOS EXTERNOS, ASI COMO LOS SERVICIOS DE AGRONOMOS, ECONOMISTAS, INGENIEROS ETC.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE ASESORAMIENTO EMPRESARIAL Y EN MATERIA DE GESTION INCLUYE LAS ZONAS FRANCAS DEDICADAS A PROMOCION, CREACION, DESARROLLO Y ADMINISTRACION DEL PROCESO DE INDUSTRIALIZACION DE BIENES Y LA PRESTACION DE SERVICIOS DESTINADOS PRIORITARIAMENTE A LOS MERCADOS EXTERNOS, ASI COMO LOS SERVICIOS DE AGRONOMOS, ECONOMISTAS, INGENIEROS ETC.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1741401">
+                1741401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="64">
+                64
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="103">
+                103
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="106">
+                106
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="26">
+                26
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE CONTABILIDAD, TENEDURIA DE LIBROS Y AUDITORIA go  ASESORAMIENTO EN MATERIA DE IMPUESTOS">EMPRESAS DEDICADAS A ACTIVIDADES DE CONTABILIDAD, TENEDURIA DE LIBROS Y AUDITORIA go  ASESORAMIENTO EN MATERIA DE IMPUESTOS
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1741201">
+                1741201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="71">
+                71
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="87">
+                87
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="148">
+                148
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="72">
+                72
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="3851401">
+                3851401
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="129">
+                129
+              </td>
+              <td>
+                <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+              </td>
+              <td>
+                <input type="hidden" name="idActiEconomica" value="1660201">
+                1660201
+              </td>
+              <td>
+                <input type="hidden" name="totaltrabajadores" value="undefined">
+                undefined
+              </td>
+            </tr>
+            <tr name="pcs" style="display: none;">
+              <td>
+                <input type="checkbox" name="centros" id="centros">
+              </td>
+              <td>
+                <input type="hidden" name="idCentroTrabajo" value="65">65</td><td><input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="113">
+                  113
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="2753001">
+                  2753001
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="122">
+                  122
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS">
+                  EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="2672101">
+                  2672101
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="142">
+                  142
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="3851401">
+                  3851401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="56">
+                  56
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="131">
+                  131
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="60">
+                  60
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="3851401">
+                  3851401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="83">
+                  83
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EDUCACION SUPERIOR HACE REFERENCIA A EMPRESAS DEDICADAS A ESPECIALIZACIONES Y POSTGRADOS CUANDO SE REALICEN ACTIVIDADES PRACTICAS SE ASIMILARAN AL RIESGO DEL CENTRO DE TRABAJO.">
+                  EDUCACION SUPERIOR HACE REFERENCIA A EMPRESAS DEDICADAS A ESPECIALIZACIONES Y POSTGRADOS CUANDO SE REALICEN ACTIVIDADES PRACTICAS SE ASIMILARAN AL RIESGO DEL CENTRO DE TRABAJO.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1805001">
+                  1805001
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="86">
+                  86
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="88">
+                  88
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="91">
+                  91
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="3851401">
+                  3851401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="101">
+                  101
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="2753001">
+                  2753001
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="104">
+                  104
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS">
+                  EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="2672101">
+                  2672101
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="66">
+                  66
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="110">
+                  110
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="74">
+                  74
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="109">
+                  109
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="81">
+                  81
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="119">
+                  119
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="77">
+                  77
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="100">
+                  100
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS">EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="2672101">
+                  2672101
+                </td>
+                <td><input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="112">
+                  112
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="79">
+                  79
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="90">
+                  90
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="145">
+                  145
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="3851401">
+                  3851401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="58">
+                  58
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="96">
+                  96
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="69">
+                  69
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="94">
+                  94
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="3851401">
+                  3851401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="95">
+                  95
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="55">
+                  55
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="128">
+                  128
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="70">
+                  70
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="127">
+                  127
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS">
+                  EMPRESAS DEDICADAS A ACTIVIDADES AUXILIARES DE LOS SEGUROS INCLUYE LOS SERVICIOS DE AJUSTADORES DE SEGUROS
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="2672101">
+                  2672101
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="146">
+                  146
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="3851401">
+                  3851401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="57">
+                  57
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="102">
+                  102
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="133">
+                  133
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE REASEGUROS CUANDO LAS ACTIVIDADES DE REASEGURAMIENTO SE REALIZAN INDEPENDIENTEMENTE DE LA DE LOS SEGUROS HACE REFERENCIA A EMPRESAS DEDICADAS AL ASEGURAMIENTO A CAMPA¥AS DE SEGUROS POR PARTE DE OTRA COMPA¥IA ASEGURADORA, MEDIANTE CONTRATOS ENTRE EL ASEGURADOR CON UN TERCERO PARA CEDER PARTE DEL RIESGO.">
+                  PLANES DE REASEGUROS CUANDO LAS ACTIVIDADES DE REASEGURAMIENTO SE REALIZAN INDEPENDIENTEMENTE DE LA DE LOS SEGUROS HACE REFERENCIA A EMPRESAS DEDICADAS AL ASEGURAMIENTO A CAMPA¥AS DE SEGUROS POR PARTE DE OTRA COMPA¥IA ASEGURADORA, MEDIANTE CONTRATOS ENTRE EL ASEGURADOR CON UN TERCERO PARA CEDER PARTE DEL RIESGO.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660301">
+                  1660301
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="143">
+                  143
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE APOYO DIAGNOSTICO INCLUYE SOLAMENTE LOS LABORATORIOS DE ANALISIS QUIMICOS, BIOLOGICOS, BANCOS DE SANGRE Y SIMILARES.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="3851401">
+                  3851401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="67">
+                  67
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="97">
+                  97
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="68">
+                  68
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="99">
+                  99
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="135">
+                  135
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES">
+                  EMPRESAS DEDICADAS A ACTIVIDADES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA INCLUYE LOS SERVICIOS DE PREVENCION DE RIESGOS PROFESIONALES Y/O AMBIENTALES
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="2753001">
+                  2753001
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="76">
+                  76
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="114">
+                  114
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE PENSIONES Y CESANTIAS HACE REFERENCIA A EMPRESAS DEDICADAS A LOS PLANES DE PAGO DE PENSIONES JUBILATORIOS Y CESANTIAS ASI COMO LA CAPTACION E INVERSION DE LOS FONDOS.">
+                  PLANES DE PENSIONES Y CESANTIAS HACE REFERENCIA A EMPRESAS DEDICADAS A LOS PLANES DE PAGO DE PENSIONES JUBILATORIOS Y CESANTIAS ASI COMO LA CAPTACION E INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660401">
+                  1660401
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="115">
+                  115
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.">
+                  PLANES DE SEGUROS DE VIDA HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS DE VIDA INCLUSO EL REASEGURO Y OTROS TIPOS DE SEGURO A LARGO PLAZO, CONTENGA O NO UN ELEMENTO IMPORTANTE DE AHORRO INVOLUCRANDO LA CAPTACION Y LA INVERSION DE LOS FONDOS.
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660201">
+                  1660201
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="116">
+                  116
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="EMPRESAS DEDICADAS A OTRAS ACTIVIDADES EMPRESARIALES NCP INCLUYE OFICINAS DE NEGOCIOS VARIOS TALES COMO COBRANZAS DE CUENTAS, ACTIVIDADES DE EVALUACION EXCEPTO LAS RELACIONADAS CON BIENES RAICES Y NEGOCIOS, ACTIVIDADES DE INTERMEDIACION Y PROMOCION COMERCIAL, SUBASTAS, TRAMITACION DE DOCUMENTOS, ACTIVIDADES DE REDACCION,  ETC">
+                  EMPRESAS DEDICADAS A OTRAS ACTIVIDADES EMPRESARIALES NCP INCLUYE OFICINAS DE NEGOCIOS VARIOS TALES COMO COBRANZAS DE CUENTAS, ACTIVIDADES DE EVALUACION EXCEPTO LAS RELACIONADAS CON BIENES RAICES Y NEGOCIOS, ACTIVIDADES DE INTERMEDIACION Y PROMOCION COMERCIAL, SUBASTAS, TRAMITACION DE DOCUMENTOS, ACTIVIDADES DE REDACCION,  ETC
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1749901">
+                  1749901
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+              <tr name="pcs" style="display: none;">
+                <td>
+                  <input type="checkbox" name="centros" id="centros">
+                </td>
+                <td>
+                  <input type="hidden" name="idCentroTrabajo" value="149">
+                  149
+                </td>
+                <td>
+                  <input type="hidden" name="nombreActEcon" value="PLANES DE SEGUROS GENERALES HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS INCLUSO EL REASEGURO DISTINTOS DE LOS SEGUROS DE VIDA EJEMPLO SEGUROS CONTRA ACCIDENTES Y CONTRA INCENDIOS ETC, ASI COMO LOS PLANES DE MEDICINA PREPAGADA">
+                  PLANES DE SEGUROS GENERALES HACE REFERENCIA A EMPRESAS DEDICADAS A LOS SEGUROS INCLUSO EL REASEGURO DISTINTOS DE LOS SEGUROS DE VIDA EJEMPLO SEGUROS CONTRA ACCIDENTES Y CONTRA INCENDIOS ETC, ASI COMO LOS PLANES DE MEDICINA PREPAGADA
+                </td>
+                <td>
+                  <input type="hidden" name="idActiEconomica" value="1660101">
+                  1660101
+                </td>
+                <td>
+                  <input type="hidden" name="totaltrabajadores" value="undefined">
+                  undefined
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </table>
+  
+        
+          <div class="pagination light-theme simple-pagination" id="paginador1">
+            <ul>
+              <li class="disabled">
+                <span class="current prev">
+                  <i class="fa fa-chevron-left">
+                    <i class="fa fa-chevron-left">
+                      </i>
+                  </i>
+                  </span>
+              </li>
+                <li class="active">
+                  <span class="current">
+                    1
+                  </span>
+                </li>
+                <li>
+                  <a href="#page-2" class="page-link">
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a href="#page-3" class="page-link">
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a href="#page-4" class="page-link">
+                    4
+                  </a>
+                </li>
+                <li>
+                  <a href="#page-5" class="page-link">
+                    5
+                  </a>
+                </li>
+                <li class="">
+                  <span class="ellipse clickable">
+                    …
+                  </span>
+                </li>
+                <li>
+                  <a href="#page-20" class="page-link">
+                    20
+                  </a>
+                </li>
+                <li>
+                  <a href="#page-21" class="page-link">
+                    21
+                  </a>
+                </li>
+                <li>
+                  <a href="#page-2" class="page-link next">
+                    <i class="fa fa-chevron-right">
+                      <i class="fa fa-chevron-right">
+                        </i>
+                    </i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </ion-scroll>
+</ion-item>
+          
+  </ion-list>
+</ion-card>
+</ion-content>

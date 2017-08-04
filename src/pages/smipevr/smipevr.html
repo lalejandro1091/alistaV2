@@ -1,0 +1,55 @@
+<!--
+  Generated template for the SmipevrPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>smipevr</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Seleccionar Metodologia
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <label>Sede</label>
+      </ion-item>
+      <ion-item>
+        <select class="form-control" id="Pk_Id_Sede" name="Pk_Id_Sede">
+          <option value="">-- Seleccionar --</option>
+          <option value="34">CASA MATRIZ</option>
+          <option value="40">SUCURSAL BOGOTÁ CORDINADORA</option>
+          <option value="41">SUCURSAL SANTANDER</option>
+          <option value="47">SUCURSAL HUILA</option>
+        </select>
+      </ion-item>
+      <ion-item>
+        <label>Metodología:</label>
+      </ion-item>
+      <ion-item>
+        <select class="form-control" id="PK_Metodologia" name="PK_Metodologia">
+          <option value="">-- Seleccionar --</option>
+          <option value="1">GTC 45/2012</option>
+          <option value="2">RAM</option>
+          <option value="3">INSHT</option>
+        </select>
+      </ion-item>
+      <ion-item>
+        <button ion-button block>Generar</button>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</ion-content>

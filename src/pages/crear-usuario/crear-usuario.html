@@ -1,0 +1,79 @@
+<!--
+  Generated template for the CrearUsuarioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>crearUsuario</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Información Usuario
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <label>Tipo Documento</label>
+      </ion-item>
+      <ion-item>
+        <select class="form-control" id="Fk_Tipo_Documento" name="Fk_Tipo_Documento">
+          <option value="">-- Seleccionar --</option>
+          <option value="1">CÉDULA DE CIUDADANIA</option>
+          <option value="2">NIT</option>
+          <option value="3">CÉDULA DE EXTRANJERÍA</option>
+          <option value="4">NUIP</option>
+          <option value="5">PASAPORTE</option>
+        </select>
+      </ion-item>
+      <ion-item>
+        <label>Número ID</label>
+      </ion-item>
+      <ion-item>
+        <input type="number" name="Numero_Documento" id="Numero_Documento" class=" form-control">
+      </ion-item>
+      <ion-item>
+        <label>Perfil Usuario</label>
+      </ion-item>
+      <ion-item>
+        <select class="form-control selectpicker" id="Fk_Id_Rol" multiple="multiple" name="Fk_Id_Rol" title="Seleccione ...">
+          <option value="14">REPRESENTANTE LEGAL</option>
+          <option value="15">RESPONSABLE DE SGSST</option>
+          <option value="16">PROFESIONAL SST</option>
+          <option value="17">COPASST / VIGIA</option>
+          <option value="18">COMITÉ DE CONVIVENCIA</option>
+          <option value="19">COORDINADOR DE ALTURAS</option>
+          <option value="20">TRABAJADORES</option>
+        </select>
+      </ion-item>
+      <ion-item>
+        <label>Nombre Usuario</label>
+      </ion-item>
+      <ion-item>
+        <input class="form-control text-box single-line" id="Nombre_Usuario" name="Nombre_Usuario" type="text" value="">
+      </ion-item>
+      <ion-item>
+        <label>Firma Digital</label>
+      </ion-item>
+      <ion-item>
+        <input type="file" value="Cargar Firma" name="Firma" class="form-control btn btn-default btn btn-sm" style="background-color:transparent; width:310px; color:black">
+      </ion-item>
+      <ion-item>
+        <button ion-button block>Guardar Registro</button>
+      </ion-item>
+    </ion-list>
+      
+  </ion-card-content>
+</ion-card>
+<button ion-button block (click)="irUsuarios()" >Listado Usuarios</button>
+</ion-content>

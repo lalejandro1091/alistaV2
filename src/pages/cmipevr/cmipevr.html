@@ -1,0 +1,352 @@
+<!--
+  Generated template for the CmipevrPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>cmipevr</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Consultar Metodología
+  </ion-card-header>
+  <ion-card-content>
+    <ion-scroll scrollX="true" scrollY="true">
+      <div class="table-responsive">
+        <table class="table table-bordered" style="border: 2px solid lightslategray">
+                <tbody><tr class="titulos_tabla">
+                    <th style="border-right: 2px solid lightslategray; text-align:center">
+                        Nombre de la Sede
+                    </th>
+                    <th style="border-right: 2px solid lightslategray; text-align:center">
+                        Nombre de la Metodología Utilizada
+                    </th>
+                    <th style="border-right: 2px solid lightslategray; text-align:center">
+                        Ver
+                    </th>
+                    <th style="border-right: 2px solid lightslategray; text-align:center">
+                        Descargar
+                    </th>
+                    <th style="text-align:center">
+                        Eliminar
+                    </th>
+                </tr>
+
+                    <tr class="titulos_filas">
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdSede" type="hidden" value="34">
+                            CASA MATRIZ
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdMetodologia" type="hidden" value="1">
+                            GTC 45/2012
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            
+                            <a href="/Metodologia/MostrarMatriz?idSede=34&amp;idMetodologia=1" class="btn btn-search btn-md">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+
+                        </td>
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            <a href="/Metodologia/ExcelMatriz?idSede=34&amp;idMetodologia=1">
+                                <img src="/Images/iconExcelp.png">
+                            </a>
+                        </td>
+                        <td style="vertical-align:middle; text-align:center">
+                            
+                            <a data-toggle="modal" data-target="#modalEliminar35" value="Eliminar" class="btn-search">
+                                <span class="glyphicon glyphicon-erase"></span>
+                            </a>
+
+                            <div id="modalEliminar35" class=" modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                            
+                                            <h4 class="modal-title title">Eliminar Matriz</h4>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            <p>¿Esta seguro que desea eliminar la matriz seleccionada?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="boton botonactive" href="/Metodologia/EliminarMatriz?idSede=34&amp;idMetodologia=1" type="button">Eliminar</a>
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="titulos_filas">
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdSede" type="hidden" value="34">
+                            CASA MATRIZ
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdMetodologia" type="hidden" value="3">
+                            INSHT
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            
+                            <a href="/Metodologia/MostrarMatriz?idSede=34&amp;idMetodologia=3" class="btn btn-search btn-md">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+
+                        </td>
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            <a href="/Metodologia/ExcelMatriz?idSede=34&amp;idMetodologia=3">
+                                <img src="/Images/iconExcelp.png">
+                            </a>
+                        </td>
+                        <td style="vertical-align:middle; text-align:center">
+                            
+                            <a data-toggle="modal" data-target="#modalEliminar37" value="Eliminar" class="btn-search">
+                                <span class="glyphicon glyphicon-erase"></span>
+                            </a>
+
+                            <div id="modalEliminar37" class=" modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                            
+                                            <h4 class="modal-title title">Eliminar Matriz</h4>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            <p>¿Esta seguro que desea eliminar la matriz seleccionada?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="boton botonactive" href="/Metodologia/EliminarMatriz?idSede=34&amp;idMetodologia=3" type="button">Eliminar</a>
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="titulos_filas">
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdSede" type="hidden" value="40">
+                            SUCURSAL BOGOTÁ CORDINADORA
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdMetodologia" type="hidden" value="2">
+                            RAM
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            
+                            <a href="/Metodologia/MostrarMatriz?idSede=40&amp;idMetodologia=2" class="btn btn-search btn-md">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+
+                        </td>
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            <a href="/Metodologia/ExcelMatriz?idSede=40&amp;idMetodologia=2">
+                                <img src="/Images/iconExcelp.png">
+                            </a>
+                        </td>
+                        <td style="vertical-align:middle; text-align:center">
+                            
+                            <a data-toggle="modal" data-target="#modalEliminar42" value="Eliminar" class="btn-search">
+                                <span class="glyphicon glyphicon-erase"></span>
+                            </a>
+
+                            <div id="modalEliminar42" class=" modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                            
+                                            <h4 class="modal-title title">Eliminar Matriz</h4>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            <p>¿Esta seguro que desea eliminar la matriz seleccionada?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="boton botonactive" href="/Metodologia/EliminarMatriz?idSede=40&amp;idMetodologia=2" type="button">Eliminar</a>
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="titulos_filas">
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdSede" type="hidden" value="41">
+                            SUCURSAL SANTANDER
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdMetodologia" type="hidden" value="1">
+                            GTC 45/2012
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            
+                            <a href="/Metodologia/MostrarMatriz?idSede=41&amp;idMetodologia=1" class="btn btn-search btn-md">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+
+                        </td>
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            <a href="/Metodologia/ExcelMatriz?idSede=41&amp;idMetodologia=1">
+                                <img src="/Images/iconExcelp.png">
+                            </a>
+                        </td>
+                        <td style="vertical-align:middle; text-align:center">
+                            
+                            <a data-toggle="modal" data-target="#modalEliminar42" value="Eliminar" class="btn-search">
+                                <span class="glyphicon glyphicon-erase"></span>
+                            </a>
+
+                            <div id="modalEliminar42" class=" modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                            
+                                            <h4 class="modal-title title">Eliminar Matriz</h4>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            <p>¿Esta seguro que desea eliminar la matriz seleccionada?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="boton botonactive" href="/Metodologia/EliminarMatriz?idSede=41&amp;idMetodologia=1" type="button">Eliminar</a>
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="titulos_filas">
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdSede" type="hidden" value="41">
+                            SUCURSAL SANTANDER
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdMetodologia" type="hidden" value="3">
+                            INSHT
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            
+                            <a href="/Metodologia/MostrarMatriz?idSede=41&amp;idMetodologia=3" class="btn btn-search btn-md">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+
+                        </td>
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            <a href="/Metodologia/ExcelMatriz?idSede=41&amp;idMetodologia=3">
+                                <img src="/Images/iconExcelp.png">
+                            </a>
+                        </td>
+                        <td style="vertical-align:middle; text-align:center">
+                            
+                            <a data-toggle="modal" data-target="#modalEliminar44" value="Eliminar" class="btn-search">
+                                <span class="glyphicon glyphicon-erase"></span>
+                            </a>
+
+                            <div id="modalEliminar44" class=" modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                            
+                                            <h4 class="modal-title title">Eliminar Matriz</h4>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            <p>¿Esta seguro que desea eliminar la matriz seleccionada?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="boton botonactive" href="/Metodologia/EliminarMatriz?idSede=41&amp;idMetodologia=3" type="button">Eliminar</a>
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr class="titulos_filas">
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdSede" type="hidden" value="47">
+                            SUCURSAL HUILA
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle">
+                            <input name="IdMetodologia" type="hidden" value="2">
+                            RAM
+                        </td>
+
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            
+                            <a href="/Metodologia/MostrarMatriz?idSede=47&amp;idMetodologia=2" class="btn btn-search btn-md">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+
+                        </td>
+                        <td style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                            <a href="/Metodologia/ExcelMatriz?idSede=47&amp;idMetodologia=2">
+                                <img src="/Images/iconExcelp.png">
+                            </a>
+                        </td>
+                        <td style="vertical-align:middle; text-align:center">
+                            
+                            <a data-toggle="modal" data-target="#modalEliminar49" value="Eliminar" class="btn-search">
+                                <span class="glyphicon glyphicon-erase"></span>
+                            </a>
+
+                            <div id="modalEliminar49" class=" modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header encabezado" style="background-color:transparent; border-bottom:none">
+                                            
+                                            <h4 class="modal-title title">Eliminar Matriz</h4>
+                                        </div>
+                                        <div class="modal-body" style="text-align:center">
+                                            <p>¿Esta seguro que desea eliminar la matriz seleccionada?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="boton botonactive" href="/Metodologia/EliminarMatriz?idSede=47&amp;idMetodologia=2" type="button">Eliminar</a>
+                                            <button type="button" class="boton botoncancel" data-dismiss="modal">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+            </tbody></table>
+    </div>
+    </ion-scroll>
+  </ion-card-content>
+</ion-card>
+</ion-content>

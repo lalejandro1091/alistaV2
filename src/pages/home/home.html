@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item *ngFor="let d of diseases; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      
+      <h3 class="btn" style="color:white; text-align:center;display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; text-transform: uppercase;">
+        <ion-icon name="{{d.icon}}"></ion-icon> {{d.title}}
+        <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+      </h3>
+      <ion-list *ngFor="let m of d.items" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      
+      <div *ngIf="isGroupShown(i)"><button ion-button block class="btn" (click)="openPage(m.component)">{{m.title}}</button></div>
+      
+      </ion-list>
+    </ion-item>
+  </ion-list>
+</ion-content>

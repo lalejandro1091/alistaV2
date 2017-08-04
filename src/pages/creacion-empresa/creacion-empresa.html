@@ -1,0 +1,109 @@
+<!--
+  Generated template for the CreacionEmpresaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>creacionEmpresa</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Gestion de Empresas Asociadas
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <label id="text">Razón Social - Tipo de documento - Identificación empleador / Contratante</label>
+      </ion-item>
+      <ion-item>
+        <label id="text">¿Desea incluir empresas asociadas a su organización, recuerde que esto le permitirá gestionar e identificar las ausencias, accidentes e investigaciones de sus empresas asociadas?</label>
+      </ion-item>
+      <ion-item>
+        <label>
+          <input type="radio" name="color" id="rbSI"> SI      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <label>
+          <input type="radio" name="color" id="rbNO"> NO
+        </label>
+      </ion-item>
+      <ion-item>
+        <ion-scroll scrollX="true" scrollY="true">
+        <div class="panel panel-default" style="background-color: rgba(196, 202, 196, 0.1);" id="idDivCargarPlantilla">
+                        <div class="panel-heading" style="color:black">
+                            Búsqueda de empresas usuarias
+                        </div>
+
+
+                        <div class="panel-body form-horizontal">
+                            <div class="row">
+                                <div class="form-group" style="margin-left: 5px">
+                                                                         
+<form action="/CrearEmpresaUsuaria/ObtenerEmpresaUsuaria" id="idObtenerEmpresaUsuaria" method="post">                                        <table style="border-style: hidden;" align="center">
+                                            <tbody><tr>
+                                                <td style="border-style: hidden;">
+                                                    <label class="col-md-12">Identificación Empresa:</label>
+                                                </td>
+                                                <td style="border-style: hidden;">
+                                                    <input type="number" name="nitempresa" id="nitempresa" placeholder="Ingresar NIT" class="form-control">
+                                                </td>
+                                                <td style="border-style: hidden;">
+                                                    <button type="button" class="boton botoninfo" id="btnObtenerEmpresaUsuarias" onclick="BuscarEmpresa()" style="margin-left:10px">Buscar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+</form>
+                                    <div class="panel-heading" style="color:black">
+                                        <span class="label label-warning" id="idMensaje"></span>
+                                    </div>
+
+                                </div>
+                                <div class="panel-heading" style="color:black">
+                                    <span class="label label-info" id="idMensajeOK"></span>
+                                </div>
+
+                            </div>
+                            <!-- empresas temporal busqueda-->
+                            <div>
+
+                                <table class="table table-responsive table-condensed table-bordered" style="border: 2px solid lightslategray">
+                                    <thead>
+                                        <tr class="titulos_tabla">
+                                            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">Razón Social </th>
+                                            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">Tipo de documento </th>
+                                            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">Identificación</th>
+                                            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">Dirección</th>
+                                            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">Departamento</th>
+                                            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">Municipio</th>
+                                            <th style="border-right: 2px solid lightslategray; border-bottom: 2px solid lightslategray; text-align:center">Edición</th>
+                                        </tr>
+
+                                                                                <form action="/CrearEmpresaUsuaria/GuardarEmpresasUsuarias" id="idGuardarEmpresasUsuarias" method="post"></form>                                            <tr class="titulos_filas">
+                                                <td colspan="7" style="border-right: 2px solid lightslategray; vertical-align:middle; text-align:center">
+                                                    <button type="button" class="boton botonactive" id="btnGuardarEmpresas" onclick="GuardarEmpresas()">Guardar</button>
+                                                </td>
+                                            </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+
+                        </div>
+                        <div id="divMensaje">   </div>
+                    </div>
+        </ion-scroll>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</ion-content>

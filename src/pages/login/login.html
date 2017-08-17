@@ -24,18 +24,18 @@
   <ion-card>
     <ion-list>
     <ion-item>
-    <ion-label floating>Digite documento empleador</ion-label>
-    <ion-input type="number" ></ion-input>
+    <ion-label floating>Nit Empresa</ion-label>
+    <ion-input [(ngModel)]="data.nit" type="number" name="nit" ></ion-input>
     </ion-item>
   <ion-item>
-    <ion-label floating>Digite documento de usuario</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-label floating>Cédula Trabajador</ion-label>
+    <ion-input [(ngModel)]="data.cedula" type="number" name="cedula"></ion-input>
 
   </ion-item>
 
 
 <ion-item>
-  <button ion-button block id="login" (click)="entrar()">Ingresar</button>
+  <button ion-button block id="login" (click)="getRequest()">Ingresar</button>
 </ion-item>
   </ion-list>
   </ion-card>

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { TabsPage } from '../tabs/tabs';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions  } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 /**
  * Generated class for the LoginPage page.
@@ -18,8 +19,8 @@ import { Http } from '@angular/http';
 export class LoginPage {
   data: any = {};
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
-    this.data.user = '';
-    this.data.pass = '';
+    this.data.nit = '';
+    this.data.cedula = '';
     this.http = http;
   }
 
@@ -30,19 +31,55 @@ export class LoginPage {
     this.navCtrl.setRoot(TabsPage);
   }
 
-  submit() {
-  var link = 'http://tunesources.tk/owncloud/php/login.php';
-  var myData = JSON.stringify({user: this.data.user, pass: this.data.pass});
- 
-  this.http.post(link, myData)
-  .subscribe(data => {
-  this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
-  if(this.data.response == "success"){
-    this.navCtrl.setRoot(HomePage);
+
+getRequest() {
+    var headers = new Headers();
+    headers.append("Accept", 'application/json');
+    headers.append('Content-Type', 'application/json' );
+    let options = new RequestOptions({ headers: headers });
+    let nit = this.data.nit;
+    let cedula = this.data.cedula;
+    let postParams = {
+      nit: this.data.nit,
+      cedula: this.data.cedula
+    }
+
+    this.http.get('http://localhost:8080/api/name?nit='+this.data.nit+'&cedula='+this.data.cedula)
+
+      .subscribe(res => this.data = res.json(), data => {
+        
+        this.data.response = data['_body'];
+        if(this.data.response.length>0){
+        this.data.response=JSON.parse(this.data.response);
+
+          if(this.data.response['nit']==nit && this.data.response['cedula']==cedula && nit!="" && nit!=undefined){
+            this.navCtrl.setRoot(TabsPage, {nit:nit, nombre:this.data.response['nombre']});
+        }
+        }
+        console.log(this.data.response.nombre);
+        //console.log(JSON.stringify(this.data));
+        
+       },
+    );
+
   }
-  }, error => {
-  console.log("Oooops!");
-  });
-  }
+  /*
+  get(){
+    let nit = this.data.nit;
+    let cedula = this.data.cedula;
+
+    this.http.get('http://localhost:8080/api/name?nit='+this.data.nit+'&cedula='+this.data.cedula)
+    .subscribe(res => {
+      this.data = res.json();
+      this.data.response = this.data['_body'];
+      this.data.response=JSON.parse(this.data.response);
+      if(this.data.response['nit']==nit && this.data.response['cedula']==cedula && nit!="" && nit!=undefined){
+          this.navCtrl.setRoot(TabsPage);
+        }
+      console.log(this.data.response);
+
+    })
+  }*/
+
 
 }

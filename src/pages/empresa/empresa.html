@@ -7,10 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>empresa</ion-title>
+    <ion-row>
+      <ion-col>
+    <ion-title>{{nombre}}</ion-title>
+      </ion-col>
+      <ion-col style="text-align:center">
+    <img src="img/home.ico" style="width:40px;height:40px" center>
+      </ion-col>
+      <ion-col>
     <ion-buttons end>
       <button ion-button icon-only (click)="goSettings()"><ion-icon name="settings"></ion-icon></button>
     </ion-buttons>
+      </ion-col>
+    </ion-row>
   </ion-navbar>
 
 </ion-header>
@@ -27,7 +36,7 @@
       </h3>
       <ion-list *ngFor="let m of d.items" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
       
-      <div *ngIf="isGroupShown(i)"><button ion-button block class="btn" (click)="openPage(m.component)">{{m.title}}</button></div>
+      <div *ngIf="isGroupShown(i)"><button ion-button block class="btn" (click)="openPage(m.id)">{{m.title}}</button></div>
       
       </ion-list>
     </ion-item>

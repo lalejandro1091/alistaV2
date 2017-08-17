@@ -21,11 +21,60 @@
   <ion-item>
     <h1 style="text-align:center">Mi Perfil</h1>
   </ion-item>
+  <ion-item style="text-align:center">
+    <label>Nombre del Trabajador</label>
+    <br>
+
+    <label>{{nombre}}</label>
+  </ion-item>
+  <ion-row>
+    <ion-col style="text-align:center">
+      <label>Tipo</label>
+      <br>
+
+      <label>{{tipo_documento}}</label>
+    </ion-col>
+    <ion-col style="text-align:center">
+      <label>Número</label>
+        <br>
+
+      <label>{{identificacion}}</label>
+    </ion-col>
+    <ion-col style="text-align:center">
+      <label>Cargo</label>
+    </ion-col>
+  </ion-row>
+  <br>
+  <br>
+  <br>
   <ion-item>
     <h1 style="text-align:center">Mi Empresa</h1>
   </ion-item>
+  <ion-row>
+    <ion-col style="text-align:center">
+      <label>Razón Social</label>
+      <br>
+      <label>{{razon}}</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col style="text-align:center">
+        <label>Código Actividad Económica Principal</label>
+        <br>
+        <label>{{codigo_actividad}}</label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col style="text-align:center">
+          <label>Dirección Sede Principal</label>
+          <br>
+          <label>{{direccion}}</label>
+        </ion-col>
+      </ion-row>
   <ion-item>
-    <button ion-button block>Cerrar Sesión</button>
+
   </ion-item>
 </ion-list>
+<button class="ion-item icon ion-power block"><ion-icon name="power"></ion-icon>Cerrar Sesión</button>
+<a class="button icon ion-power">Cerrar Sesión</a>
 </ion-content>

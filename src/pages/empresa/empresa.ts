@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController, Events } from 'ionic-angular';
+import { NavController, NavParams, Events } from 'ionic-angular';
 import { DatosGeneralesPage } from '../datos-generales/datos-generales';
-import { RelacionesLaboralesPage } from '../relaciones-laborales/relaciones-laborales';
 import { ConsultarRlPage } from '../consultar-rl/consultar-rl';
 import { NotificarInconsistenciaPage } from '../notificar-inconsistencia/notificar-inconsistencia';
 import { CargarRltPage } from '../cargar-rlt/cargar-rlt';
 import { ConsultarRltPage } from '../consultar-rlt/consultar-rlt';
 import { CreacionEmpresaPage } from '../creacion-empresa/creacion-empresa';
 import { SettingsPage } from '../settings/settings';
-import { LoginPage } from '../login/login';
 
 
 /**
@@ -34,7 +32,7 @@ export class EmpresaPage {
     {title:"Cargar Relaciones Laborales de Terceros", component:CargarRltPage},
     {title:"Consultar Relaciones Laborales de Terceros", component:ConsultarRltPage},
     {title:"Creacion de Empresas Asociadas", component:CreacionEmpresaPage}]},
-    
+
   ];
    shownGroup = null;
 
@@ -48,12 +46,14 @@ export class EmpresaPage {
       this.nit = nit;
       this.nombre = nombre;
     });
-          
+
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EmpresaPage');
-    console.log(this.nombre, this.nit);
+    console.log(this.isActive());
+    //console.log('ionViewDidLoad EmpresaPage');
+    //console.log(this.nombre, this.nit);
   }
 /*  datosGenerales(){
     this.navCtrl.setRoot(DatosGeneralesPage, {nit: this.navParams.get('nit'), nombre: this.nombre});
@@ -73,7 +73,7 @@ export class EmpresaPage {
   isGroupShown(group) {
       return this.shownGroup === group;
   };
-      
+
   openPage(id){
     switch(id){
       case '1':
@@ -84,5 +84,12 @@ export class EmpresaPage {
   }
   goSettings(){
     this.navCtrl.push(SettingsPage);
+  }
+
+  public isActive(): boolean {
+
+    //return this.navCtrl.getActive().component === EmpresaPage;
+    return
+
   }
 }

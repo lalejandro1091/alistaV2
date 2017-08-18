@@ -34,7 +34,7 @@ export class TabsPage {
 
 
   constructor(public navCtrl: NavController, public events: Events, public navParams: NavParams, public viewController: ViewController) {
-    console.log(this.navCtrl.isActive('Empresa'));
+   // console.log(this.navCtrl.isActive(viewController.this.tab1Root));
     this.tab1Params.nit = navParams.get('nit');
     this.tab1Params.nombre = navParams.get('nombre');
     events.subscribe('change-tab', (tab, nombre) => {
@@ -43,13 +43,15 @@ export class TabsPage {
     });
   }
   ionViewDidLoad() {
+    console.log(this.isActive());
     console.log('ionViewDidLoad LoginPage');
     console.log(this.tab1Params.nombre);
 
   }
 
-  public isActive(pageName: string): boolean {
-    return this.navCtrl.getActive().name === pageName;
+  public isActive(): boolean {
 
-}
+    return this.navCtrl.getActive().component === EmpresaPage;
+
+  }
 }
